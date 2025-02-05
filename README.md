@@ -2,34 +2,34 @@
 
 Follow these steps to run and label the ODD data.
 
-## Clone this repository
-'''bash
+### Clone this repository
+```bash
 git clone <this repo>
-'''
+```
 
-## Change the directory
-'''bash
+### Change the directory
+```bash
 cd GUI
-'''
+```
 
-## Install the dependencies
-'''bash
+### Install the dependencies
+```bash
 pip install -r requirements.txt
-'''
+```
 
-## Configure your user name
+### Configure your user name
 Please change you username into the config.json file of this repository(required to allot you your pool of data to be validated). 
-'''json
+```json
 {
     "username_thi": "Mittal" // or 'Chouai', 'Klaumann', 'Okumus'
 }
-'''
+```
 
-## Launch the app from the terminal
-'''bash
+### Launch the app from the terminal
+```bash
 streamlit run app.py
-'''
+```
 
-### Make sure !!
-## you have "credentials.json" into the "GUI" directory required for S3 credentials. (you can download it when you generate a new key/token at s3)
-## you have already gone through the instructions on how to label.
+## Make sure !!
+### You have "credentials.json" into the "GUI" directory required for S3 credentials. (you can download it when you generate a new key/token at s3)
+### You have already gone through the instructions on how to label.
