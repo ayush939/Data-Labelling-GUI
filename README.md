@@ -11,7 +11,7 @@ git clone <this repo>
 
 ### Change the directory
 ```bash
-cd GUI
+cd Data-Labelling-GUI
 ```
 
 ### Install the dependencies
