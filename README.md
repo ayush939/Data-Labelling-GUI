@@ -1,6 +1,6 @@
 # How to run the GUI:
 
-![Alt text](GUI/ui.png?raw=true "GUI: ODD Data Validation")
+![Alt text](ui.png?raw=true "GUI: ODD Data Validation")
 
 Follow these steps to run and label the ODD data.
 
