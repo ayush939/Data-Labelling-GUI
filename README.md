@@ -23,7 +23,7 @@ pip install -r requirements.txt
 Please change you username into the config.json file of this repository(required to allot you your pool of data to be validated). 
 ```json
 {
-    "username_thi": "Mittal" // or 'Chouai', 'Klaumann', 'Okumus'
+    "username_thi": "Mittal" // or 'Chouai', 'Klaumann', 'Okumus' 
 }
 ```
 
