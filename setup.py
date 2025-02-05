@@ -6,7 +6,6 @@ setup(
     py_modules=["app"],  # Name of your Python file (app.py)
     install_requires=[
         "streamlit",  # Add other dependencies as needed
-        "json",
         "numpy",
         "minio"
     ],
