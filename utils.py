@@ -1,6 +1,5 @@
 import os
 import json
-import numpy as np
 import streamlit as st
 from io import BytesIO
 from minio import Minio
@@ -19,11 +18,16 @@ def nested_dict_editor(nested_dict, parent_key="", columns=None):
                 edited_dict[key] = nested_dict_editor(value, parent_key=full_key, columns=columns)
                 # Recursive call
             else:
-                if key in  ["NumberOfLanes", "Sign"]:
+                if key in  ["NumberOfLanes", "Comments"]:
                     edited_value = st.text_input(f"{key}", value=str(value), key=full_key)
-                elif key in ["RegulatorySigns", "WarningSigns", "InformationSigns"] and len(value)==0:
-                    
-                    edited_value = value
+                elif key in  ["Signs", "TimeOfOperation"]:
+                    if len(value)==0: 
+                        edited_value = value
+                    else:
+                        st.write("Part-Time / Full-Time")
+                        edited_value = st.data_editor({f"{key}": value}, num_rows="dynamic", key=full_key, hide_index=True)
+                        edited_value = edited_value[key]
+                              
                 elif key == "HorizontalPlane":
                     options = ["Straight", "Curved", ""]
                     if "straight".lower() in value.lower():
@@ -128,7 +132,6 @@ def nested_dict_editor(nested_dict, parent_key="", columns=None):
                     elif value.isnan():
                         edited_value = str(value)
                     else:
-                        #edited_value = json.loads(edited_value)
                         pass
                 except:
                     pass  # Keep it as string if conversion fails

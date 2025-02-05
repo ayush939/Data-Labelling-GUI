@@ -1,5 +1,4 @@
 import time
-import numpy as np
 import streamlit as st
 
 from utils import *
@@ -36,8 +35,9 @@ def main(client, json_data, files, config):
                             "Modified": False,
                             "Visited": False,
                             "time":0
-                    }}) 
-    editable_keys = ['Scenery', 'EnvironmentalConditions', 'DynamicElements']
+                    }})
+        data.update({"Comments": "Write your comment here.."}) 
+    editable_keys = ['Scenery', 'EnvironmentalConditions', 'DynamicElements', 'Comments']
     data_editable = {key:value for key, value in data.items() if key in editable_keys}
 
     # Display the images in first column
