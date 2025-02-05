@@ -1,4 +1,4 @@
-# GUI: ODD Data Validation:
+# GUI: ODD Data Validation
 
 ![Alt text](ui.png?raw=true "GUI: ODD Data Validation")
 
